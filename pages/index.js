@@ -1,5 +1,6 @@
 import Layout from '../components/layout'
 import { useFetchUser } from '../lib/user'
+import Image from 'next/image'
 
 function Home() {
   const { user, loading } = useFetchUser()
@@ -25,7 +26,12 @@ function Home() {
       {user && (
         <>
           <h4>Rendered user info on the client</h4>
-          <img src={user.picture} alt="user picture" />
+          <Image 
+          src={user.picture} 
+          alt="user picture" 
+          width={500}
+          height={500}
+          />
           <p>nickname: {user.nickname}</p>
           <p>name: {user.name}</p>
         </>
