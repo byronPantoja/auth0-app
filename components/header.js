@@ -12,7 +12,7 @@ function Header({ user, loading }) {
           </li>
           <li>
             <Link href="/about">
-              <a>About</a>
+              About
             </Link>
           </li>
           {!loading &&
@@ -20,22 +20,22 @@ function Header({ user, loading }) {
               <>
                 <li>
                   <Link href="/profile">
-                    <a>Client-rendered profile</a>
+                    Client-rendered profile
                   </Link>
                 </li>
                 <li>
                   <Link href="/advanced/ssr-profile">
-                    <a>Server rendered profile (advanced)</a>
+                    Server rendered profile (advanced)
                   </Link>
                 </li>
-                <li>
-                  <a href="/api/logout">Logout</a>
-                </li>
+                <Link href="/api/logout">
+                  Logout
+                </Link>
               </>
             ) : (
-              <li>
-                <a href="/api/login">Login</a>
-              </li>
+              <Link href="/api/login">
+                Login
+              </Link>
             ))}
         </ul>
       </nav>
